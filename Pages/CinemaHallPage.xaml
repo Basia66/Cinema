@@ -1,0 +1,94 @@
+﻿<Page x:Class="Cinema.Pages.CinemaHallPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CinemaHallPage" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Rectangle Name="screen" Grid.Column="2" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="5" Fill="Black" />
+
+        <!-- Number of rows -->
+        <Label Content="1" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="2" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="3" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="4" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="5" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <!-- Number of places -->
+        <Label Content="1" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="2" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="3" Grid.Column="4" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="4" Grid.Column="5" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="5" Grid.Column="6" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <!-- Places -->
+        <!-- 1 row -->
+        <Rectangle Name="seat11" Grid.Column="2" Grid.Row="6" Fill="#FF5FFF00" />
+        <Rectangle Name="seat12" Grid.Column="3" Grid.Row="6" Fill="#FF5FFF00" />
+        <Rectangle Name="seat13" Grid.Column="4" Grid.Row="6" Fill="#FF5FFF00" />
+        <Rectangle Name="seat14" Grid.Column="5" Grid.Row="6" Fill="#FF5FFF00" />
+        <Rectangle Name="seat15" Grid.Column="6" Grid.Row="6" Fill="#FF5FFF00" />
+
+        <!-- 2 row -->
+        <Rectangle Name="seat21" Grid.Column="2" Grid.Row="7" Fill="#FF5FFF00" />
+        <Rectangle Name="seat22" Grid.Column="3" Grid.Row="7" Fill="#FF5FFF00" />
+        <Rectangle Name="seat23" Grid.Column="4" Grid.Row="7" Fill="#FF5FFF00" />
+        <Rectangle Name="seat24" Grid.Column="5" Grid.Row="7" Fill="#FF5FFF00" />
+        <Rectangle Name="seat25" Grid.Column="6" Grid.Row="7" Fill="#FF5FFF00" />
+
+        <!-- 3 row -->
+        <Rectangle Name="seat31" Grid.Column="2" Grid.Row="8" Fill="#FF5FFF00" />
+        <Rectangle Name="seat32" Grid.Column="3" Grid.Row="8" Fill="#FF5FFF00" />
+        <Rectangle Name="seat33" Grid.Column="4" Grid.Row="8" Fill="#FF5FFF00" />
+        <Rectangle Name="seat34" Grid.Column="5" Grid.Row="8" Fill="#FF5FFF00" />
+        <Rectangle Name="seat35" Grid.Column="6" Grid.Row="8" Fill="#FF5FFF00" />
+
+        <!-- 4 row -->
+        <Rectangle Name="seat41" Grid.Column="2" Grid.Row="9" Fill="#FF5FFF00" />
+        <Rectangle Name="seat42" Grid.Column="3" Grid.Row="9" Fill="#FF5FFF00" />
+        <Rectangle Name="seat43" Grid.Column="4" Grid.Row="9" Fill="#FF5FFF00" />
+        <Rectangle Name="seat44" Grid.Column="5" Grid.Row="9" Fill="#FF5FFF00" />
+        <Rectangle Name="seat45" Grid.Column="6" Grid.Row="9" Fill="#FF5FFF00" />
+
+        <!-- 5 row -->
+        <Rectangle Name="seat51" Grid.Column="2" Grid.Row="10" Fill="#FF5FFF00" />
+        <Rectangle Name="seat52" Grid.Column="3" Grid.Row="10" Fill="#FF5FFF00" />
+        <Rectangle Name="seat53" Grid.Column="4" Grid.Row="10" Fill="#FF5FFF00" />
+        <Rectangle Name="seat54" Grid.Column="5" Grid.Row="10" Fill="#FF5FFF00" />
+        <Rectangle Name="seat55" Grid.Column="6" Grid.Row="10" Fill="#FF5FFF00" />
+
+    </Grid>
+
+</Page>

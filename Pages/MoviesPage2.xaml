@@ -1,0 +1,48 @@
+﻿<Page x:Class="Cinema.Pages.MoviesPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cinema.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MoviesPage2" Loaded="Page_Loaded">
+
+    <Grid>
+        <DockPanel x:Name="dockPanel" Margin="22,22,18,18">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="3*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <Image Name="im5" Grid.Column="1" Grid.Row="1"/>
+                <Image Name="im6" Grid.Column="2" Grid.Row="1"/>
+                <Image Name="im7" Grid.Column="3" Grid.Row="1"/>
+                <Image Name="im8" Grid.Column="4" Grid.Row="1"/>
+                <Image Name="im9" Grid.Column="5" Grid.Row="1"/>
+
+                <Button x:Name="previous_button" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" BorderBrush="Transparent" Focusable="False" Click="button_previous_Click">
+                    <Image  Visibility="Visible" Source="../Graphics/previous.png"  />
+                </Button>
+
+                <Button x:Name="movie5_button" Grid.Row="2" Grid.Column="1" FontSize="10" Margin="10,10,10,10"/>
+                <Button x:Name="movie6_button" Grid.Row="2" Grid.Column="2" FontSize="10" Margin="10,10,10,10"/>
+                <Button x:Name="movie7_button" Grid.Row="2" Grid.Column="3" FontSize="10" Margin="10,10,10,10"/>
+                <Button x:Name="movie8_button" Grid.Row="2" Grid.Column="4" FontSize="10" Margin="10,10,10,10"/>
+                <Button x:Name="movie9_button" Grid.Row="2" Grid.Column="5" FontSize="10" Margin="10,10,10,10"/>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Page>

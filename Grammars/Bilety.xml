@@ -1,0 +1,328 @@
+﻿<grammar version="1.0" xml:lang="pl-PL" root="rootRule" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+
+<rule id="rootRule">
+  <item repeat="0-1">
+    <ruleref uri="#count"/>
+    <tag>out.count0=rules.latest();</tag>
+    <ruleref uri="#ticket_type"/>
+    <tag>out.ticket_type0=rules.latest();</tag>
+  </item>
+  <item repeat="0-1">
+    <ruleref uri="#count"/>
+    <tag>out.count1=rules.latest();</tag>
+    <ruleref uri="#ticket_type"/>
+    <tag>out.ticket_type1=rules.latest();</tag>
+  </item>
+  <item repeat="0-1">
+    <ruleref uri="#count"/>
+    <tag>out.count2=rules.latest();</tag>
+    <ruleref uri="#ticket_type"/>
+    <tag>out.ticket_type2=rules.latest();</tag>
+  </item>
+</rule>
+
+  <rule id="need">
+    <one-of>
+      <item>Chciałabym <tag> out="chce";</tag></item>
+      <item>Chcę <tag> out="chce";</tag></item>
+      <item>Chciałbym <tag> out="chce";</tag></item>
+      <item>Chcielibyśmy <tag> out="chce";</tag></item>
+      <item>Chcemy <tag> out="chce";</tag></item>
+      <item>Czy mogę <tag> out="chce";</tag></item>
+      <item>Czy możemy <tag> out="chce";</tag></item>
+      <item>Czy moglibyśmy <tag> out="chce";</tag></item>
+      <item>Czy mógłbym <tag> out="chce";</tag></item>
+      <item>Czy mogłabym <tag> out="chce";</tag></item>
+      <item>Czy mogłybyśmy <tag> out="chce";</tag></item>
+      <item>Poproszę <tag> out="chce";</tag></item>
+      <item>Poprosimy <tag> out="chce";</tag></item>
+      <item>Poprosilibyśmy <tag> out="chce";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="verbs">
+    <one-of>
+      <item>kupić <tag> out="kupic";</tag></item>
+      <item>zamówić <tag> out="kupic";</tag></item>
+      <item>zjeść <tag> out="zjesc";</tag></item>
+      <item>napić <tag> out="napic";</tag></item>
+      <item>znaleźć <tag> out="zobaczyc";</tag></item>
+      <item>wybrać <tag> out="zobaczyc";</tag></item>
+      <item>obejrzeć <tag> out="zobaczyc";</tag></item>
+      <item>pooglądać <tag> out="zobaczyc";</tag></item>
+      <item>zobaczyć <tag> out="zobaczyc";</tag></item>
+      <item>pójść na <tag> out="zobaczyc";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="movie">
+    <one-of>
+      <item>film <tag> out="film";</tag></item>
+      <item>seans <tag> out="film";</tag></item>
+      <item>repertuar <tag> out="film";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="titles">
+    <one-of>
+      <item>Milczenie owiec <tag> out="Milczenie owiec";</tag></item>
+      <item>Incepcja <tag> out="Incepcja";</tag></item>
+      <item>Incepcje <tag> out="Incepcja";</tag></item>
+      <item>Incepcję <tag> out="Incepcja";</tag></item>
+      <item>Listy Schindlera <tag> out="Listy Schindlera";</tag></item>
+      <item>List Schindlera <tag> out="Listy Schindlera";</tag></item>
+      <item>Król Lew <tag> out="Król Lew";</tag></item>
+      <item>Króla Lew <tag> out="Król Lew";</tag></item>
+      <item>Leon zawodowiec <tag> out="Leon zawodowiec";</tag></item>
+      <item>Leona zawodowca <tag> out="Leon zawodowiec";</tag></item>
+      <item>Mroczny Rycerz <tag> out="Mroczny Rycerz";</tag></item>
+      <item>Mrocznego Rycerza <tag> out="Mroczny Rycerz";</tag></item>
+      <item>Ojciec chrzestny <tag> out="Ojciec chrzestny";</tag></item>
+      <item>Ojca chrzestnego <tag> out="Ojciec chrzestny";</tag></item>
+      <item>Pianista <tag> out="Pianista";</tag></item>
+      <item>Pianiste <tag> out="Pianista";</tag></item>
+      <item>Skazani na Shawshank <tag> out="Skazani na Shawshank";</tag></item>
+      <item>Skazanych na Shawshank <tag> out="Skazani na Shawshank";</tag></item>
+      <item>Zielona Mila <tag> out="Zielona Mila";</tag></item>
+      <item>Zieloną Milę <tag> out="Zielona Mila";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="place_in_cinema">
+    <one-of>
+      <item>miejsce <tag> out="miejsce";</tag></item>
+      <item>rząd <tag> out="rząd";</tag></item>
+      <item>numer <tag> out="numer";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="ticket">
+    <one-of>
+      <item>bilet <tag> out="bilet";</tag></item>
+      <item>bilety <tag> out="bilet";</tag></item>
+      <item>biletów <tag> out="bilet";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="ticket_type">
+    <one-of>
+      <item>ulgowy <tag> out="ulgowy";</tag></item>
+      <item>ulgowe <tag> out="ulgowy";</tag></item>
+      <item>ulgowych <tag> out="ulgowy";</tag></item>
+      <item>normalny <tag> out="normalny";</tag></item>
+      <item>normalne <tag> out="normalny";</tag></item>
+      <item>normalnych <tag> out="normalny";</tag></item>
+      <item>seniorski <tag> out="seniorski";</tag></item>
+      <item>seniorskie <tag> out="seniorski";</tag></item>
+      <item>seniorskich <tag> out="seniorski";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="food">
+    <one-of>
+      <item>jedzenie <tag> out="jedzenie";</tag></item>
+      <item>jedzenia <tag> out="jedzenie";</tag></item>
+      <item>picie <tag> out="picie";</tag></item>
+      <item>picia <tag> out="picie";</tag></item>
+      <item>napoje <tag> out="picie";</tag></item>
+      <item>napój <tag> out="picie";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="typeOfFood">
+    <one-of>
+      <item>popcorn <tag> out="popcorn";</tag></item>
+      <item>popcornu <tag> out="popcorn";</tag></item>
+      <item>nachosy <tag> out="nachosy";</tag></item>
+      <item>nachosów <tag> out="nachosy";</tag></item>
+      <item>cola <tag> out="cola";</tag></item>
+      <item>cole <tag> out="cola";</tag></item>
+      <item>puszka coli <tag> out="cola";</tag></item>
+      <item>puszki coli <tag> out="cola";</tag></item>
+      <item>puszek coli <tag> out="cola";</tag></item>
+      <item>fanta <tag> out="fanta";</tag></item>
+      <item>fanty <tag> out="fanta";</tag></item>
+      <item>fant <tag> out="fanta";</tag></item>
+      <item>puszka fanty <tag> out="fanta";</tag></item>
+      <item>puszki fanty <tag> out="fanta";</tag></item>
+      <item>puszek fanty <tag> out="fanta";</tag></item>
+      <item>sprite <tag> out="sprite";</tag></item>
+      <item>puszka sprite'a <tag> out="sprite";</tag></item>
+      <item>puszki sprite'a <tag> out="sprite";</tag></item>
+      <item>puszek sprite'a <tag> out="sprite";</tag></item>
+      <item>sok <tag> out="sok";</tag></item>
+      <item>soki <tag> out="sok";</tag></item>
+      <item>ok pomarańczowy <tag> out="sok";</tag></item>
+      <item>soki pomarańczowe <tag> out="sok";</tag></item>
+      <item>butelka soku <tag> out="sok";</tag></item>
+      <item>butelki soku <tag> out="sok";</tag></item>
+      <item>butelek soku <tag> out="sok";</tag></item>
+      <item>butelka soku pomarańczowego <tag> out="sok";</tag></item>
+      <item>butelki soku pomarańczowego <tag> out="sok";</tag></item>
+      <item>butelek soku pomarańczowego/ <tag> out="sok";</tag></item>
+      <item>woda <tag> out="woda";</tag></item>
+      <item>wody <tag> out="woda";</tag></item>
+      <item>wód <tag> out="woda";</tag></item>
+      <item>butelka wody <tag> out="woda";</tag></item>
+      <item>butelek wody <tag> out="woda";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="typeOfDrink">
+    <one-of>
+      <item>cola <tag> out="cola";</tag></item>
+      <item>cole <tag> out="cola";</tag></item>
+      <item>puszka coli <tag> out="cola";</tag></item>
+      <item>puszki coli <tag> out="cola";</tag></item>
+      <item>puszek coli <tag> out="cola";</tag></item>
+      <item>fanta <tag> out="fanta";</tag></item>
+      <item>fanty <tag> out="fanta";</tag></item>
+      <item>fant <tag> out="fanta";</tag></item>
+      <item>puszka fanty <tag> out="fanta";</tag></item>
+      <item>puszki fanty <tag> out="fanta";</tag></item>
+      <item>puszek fanty <tag> out="fanta";</tag></item>
+      <item>sprite <tag> out="sprite";</tag></item>
+      <item>puszka sprite'a <tag> out="sprite";</tag></item>
+      <item>puszki sprite'a <tag> out="sprite";</tag></item>
+      <item>puszek sprite'a <tag> out="sprite";</tag></item>
+      <item>sok <tag> out="sok";</tag></item>
+      <item>soki <tag> out="sok";</tag></item>
+      <item>ok pomarańczowy <tag> out="sok";</tag></item>
+      <item>soki pomarańczowe <tag> out="sok";</tag></item>
+      <item>butelka soku <tag> out="sok";</tag></item>
+      <item>butelki soku <tag> out="sok";</tag></item>
+      <item>butelek soku <tag> out="sok";</tag></item>
+      <item>butelka soku pomarańczowego <tag> out="sok";</tag></item>
+      <item>butelki soku pomarańczowego <tag> out="sok";</tag></item>
+      <item>butelek soku pomarańczowego/ <tag> out="sok";</tag></item>
+      <item>woda <tag> out="woda";</tag></item>
+      <item>wody <tag> out="woda";</tag></item>
+      <item>wód <tag> out="woda";</tag></item>
+      <item>butelka wody <tag> out="woda";</tag></item>
+      <item>butelek wody <tag> out="woda";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="sizeOfFood">
+    <one-of>
+      <item>duży <tag> out="duży";</tag></item>
+      <item>duże <tag> out="duży";</tag></item>
+      <item>dużych <tag> out="duży";</tag></item>
+      <item>średni <tag> out="średni";</tag></item>
+      <item>średnich <tag> out="średni";</tag></item>
+      <item>średnie <tag> out="średni";</tag></item>
+      <item>mały <tag> out="mały";</tag></item>
+      <item>małych <tag> out="mały";</tag></item>
+      <item>małe <tag> out="mały";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="count">
+    <one-of>
+      <item>jeden <tag> out="1";</tag></item>
+      <item>pierwsze <tag> out="1";</tag></item>
+      <item>pierwszym <tag> out="1";</tag></item>
+      <item>pierwszy <tag> out="1";</tag></item>
+      <item>dwa <tag> out="2";</tag></item>
+      <item>dwie <tag> out="2";</tag></item>
+      <item>drugi <tag> out="2";</tag></item>
+      <item>drugie <tag> out="2";</tag></item>
+      <item>drugim <tag> out="2";</tag></item>
+      <item>trzy <tag> out="3";</tag></item>
+      <item>trzeci <tag> out="3";</tag></item>
+      <item>trzecie <tag> out="3";</tag></item>
+      <item>trzecim <tag> out="3";</tag></item>
+      <item>cztery <tag> out="4";</tag></item>
+      <item>czwarty <tag> out="4";</tag></item>
+      <item>czwarte <tag> out="4";</tag></item>
+      <item>czwartym <tag> out="4";</tag></item>
+      <item>pięć <tag> out="5";</tag></item>
+      <item>piąty <tag> out="5";</tag></item>
+      <item>piąte <tag> out="5";</tag></item>
+      <item>piątym <tag> out="5";</tag></item>
+      <item>sześć <tag> out="6";</tag></item>
+      <item>szóste <tag> out="6";</tag></item>
+      <item>szósty <tag> out="6";</tag></item>
+      <item>szóstym <tag> out="6";</tag></item>
+      <item>siedem <tag> out="7";</tag></item>
+      <item>siódme <tag> out="7";</tag></item>
+      <item>siódmy <tag> out="7";</tag></item>
+      <item>siódmym <tag> out="7";</tag></item>
+      <item>osiem <tag> out="8";</tag></item>
+      <item>ósme <tag> out="8";</tag></item>
+      <item>ósmy <tag> out="8";</tag></item>
+      <item>ósmym <tag> out="8";</tag></item>
+      <item>dziewięć <tag> out="9";</tag></item>
+      <item>dziewiąte <tag> out="9";</tag></item>
+      <item>dziewiąty <tag> out="9";</tag></item>
+      <item>dziewiątym <tag> out="9";</tag></item>
+      <item>dziesięć <tag> out="10";</tag></item>
+      <item>dziesiąte <tag> out="10";</tag></item>
+      <item>dziesiąty <tag> out="10";</tag></item>
+      <item>dziesiątym <tag> out="10";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="operation">
+    <one-of>
+      <item>dalej <tag> out="dalej";</tag></item>
+      <item>wstecz <tag> out="wstecz";</tag></item>
+      <item>tak <tag> out="tak";</tag></item>
+      <item>nie <tag> out="nie";</tag></item>
+    </one-of>
+  </rule>
+  
+  <rule id="time">
+    <one-of>
+      <item>północ <tag> out="00:00";</tag></item>
+      <item>północy <tag> out="00:00";</tag></item>
+      <item>pierwsza <tag> out="01:00";</tag></item>
+      <item>pierwszej <tag> out="01:00";</tag></item>
+      <item>druga <tag> out="02:00";</tag></item>
+      <item>drugiej <tag> out="02:00";</tag></item>
+      <item>trzecia <tag> out="03:00";</tag></item>
+      <item>trzeciej <tag> out="03:00";</tag></item>
+      <item>czwarta <tag> out="04:00";</tag></item>
+      <item>czwartej <tag> out="04:00";</tag></item>
+      <item>piąta <tag> out="05:00";</tag></item>
+      <item>piątej <tag> out="05:00";</tag></item>
+      <item>szósta <tag> out="06:00";</tag></item>
+      <item>szóstej <tag> out="06:00";</tag></item>
+      <item>siódma <tag> out="07:00";</tag></item>
+      <item>siódmej <tag> out="07:00";</tag></item>
+      <item>ósma <tag> out="08:00";</tag></item>
+      <item>ósmej <tag> out="08:00";</tag></item>
+      <item>dziewiąta <tag> out="09:00";</tag></item>
+      <item>dziewiątej <tag> out="09:00";</tag></item>
+      <item>dziesiąta <tag> out="10:00";</tag></item>
+      <item>dziesiątej <tag> out="10:00";</tag></item>
+      <item>jedenasta <tag> out="11:00";</tag></item>
+      <item>jedenastej <tag> out="11:00";</tag></item>
+      <item>dwunasta <tag> out="12:00";</tag></item>
+      <item>dwunastej <tag> out="12:00";</tag></item>
+      <item>trzynasta <tag> out="13:00";</tag></item>
+      <item>trzynastej <tag> out="13:00";</tag></item>
+      <item>czternasta <tag> out="14:00";</tag></item>
+      <item>czternastej <tag> out="14:00";</tag></item>
+      <item>piętnasta <tag> out="15:00";</tag></item>
+      <item>piętnastej <tag> out="15:00";</tag></item>
+      <item>szesnasta <tag> out="16:00";</tag></item>
+      <item>szesnastej <tag> out="16:00";</tag></item>
+      <item>siedemnasta <tag> out="17:00";</tag></item>
+      <item>siedemnastej <tag> out="17:00";</tag></item>
+      <item>osiemnasta <tag> out="18:00";</tag></item>
+      <item>osiemnastej <tag> out="18:00";</tag></item>
+      <item>dziewiętnasta <tag> out="19:00";</tag></item>
+      <item>dziewiętnastej <tag> out="19:00";</tag></item>
+      <item>dwudziesta <tag> out="20:00";</tag></item>
+      <item>dwudziestej <tag> out="20:00";</tag></item>
+      <item>dwudziesta pierwsza <tag> out="21:00";</tag></item>
+      <item>dwudziestej pierwszej<tag> out="21:00";</tag></item>
+      <item>dwudziesta druga <tag> out="22:00";</tag></item>
+      <item>dwudziestej drugiej <tag> out="22:00";</tag></item>
+      <item>dwudziesta trzecia <tag> out="23:00";</tag></item>
+      <item>dwudziestej trzeciej <tag> out="23:00";</tag></item>
+    </one-of>
+  </rule>
+  
+</grammar>
